@@ -20,22 +20,27 @@
     <link rel="stylesheet" href="./assets/css/grid.css">
     <link rel="stylesheet" href="./assets/css/styles.css">
     <link rel="stylesheet" href="./assets/fonts/stylesheet.css">
+    <link rel="stylesheet" href="./assets/css/responsive.css">
 </head>
 
 <body>
     <header class="header">
         <div class="container">
             <div class="header__inner">
+                <!-- More  -->
+                <button class="btn btn--icon header__more d-lg-flex d-none">
+                    <img src="./assets/icons/more.svg" alt="">
+                </button>
                 <!-- Logo  -->
                 <a href="/">
                     <div class="logo header__logo">
                         <img src="./assets/img/logo.png" alt="NeoShop" class="logo__img header__logo-img">
-                        <h1 class="logo__text">NeoShop</h1>
+                        <h1 class="logo__text header__logo-text">NeoShop</h1>
                     </div>
                 </a>
 
                 <!-- Search  -->
-                <div class="search-bar header__search-bar">
+                <div class="search-bar header__search-bar d-lg-none">
                     <input type="text" class="search-bar__input" placeholder="Tìm kiếm">
                     <div class="search-bar__separate"></div>
                     <button class="btn btn--icon search-bar__btn">
@@ -43,23 +48,30 @@
                     </button>
                 </div>
 
+                <!-- Icon Search -->
+                <button class="btn btn--icon header__icon-search d-md-none d-lg-flex d-none d-sm-flex">
+                    <img src="./assets/icons/search-icon.svg" alt="" class="header__img-search">
+                </button>
                 <!-- Action  -->
-                <div class="header__action-group">
-                    <button class="btn btn--icon header__action-btn">
+                <div class="header__action-group d-sm-none">
+                    <button class="btn btn--icon header__action-btn d-md-flex d-none">
+                        <img src="./assets/icons/search-icon.svg" alt="" class="header__action-icon">
+                    </button>
+                    <button class="btn btn--icon header__action-btn d-md-none">
                         <img src="./assets/icons/heart.svg" alt="" class="header__action-icon">
                     </button>
                     <div class="header__action-separate"></div>
                     <button class="btn btn--icon header__action-btn">
                         <img src="./assets/icons/shopping-cart.svg" alt="" class="header__action-icon">
                     </button>
-                    <div class="header__action-separate"></div>
-                    <button class="btn btn--icon header__action-btn">
+                    <div class="header__action-separate d-md-none"></div>
+                    <button class="btn btn--icon header__action-btn d-md-none">
                         <img src="./assets/icons/user.svg" alt="" class="header__action-icon">
                     </button>
                 </div>
             </div>
         </div>
-        <nav class="header__navbar">
+        <nav class="header__navbar d-lg-none">
             <div class="container">
                 <div class="row gy-0">
                     <div class="col-2">
@@ -102,7 +114,7 @@
             </ul>
 
             <!-- Brand -->
-            <div class="brand">
+            <div class="brand d-lg-none">
                 <div class="row gy-0">
                     <div class="col-2">
                         <button class="btn brand__btn t-h4">
@@ -164,7 +176,7 @@
             <!-- Product -->
             <section class="product__container">
                 <h2 class="product__heading d-h3">Iphone</h2>
-                <div class="row row-cols-4">
+                <div class="row row-cols-sm-1 row-cols-md-2 row-cols-lg-3 row-cols-xl-4 row-cols-4">
                     <div class="col">
                         <article class="product-card">
                             <a href="#!">
@@ -308,7 +320,7 @@
                 </div>
             </section>
 
-            <section class="product__container">
+            <!-- <section class="product__container">
                 <h2 class="product__heading d-h3">SAMSUNG</h2>
                 <div class="row row-cols-4">
                     <div class="col">
@@ -598,7 +610,7 @@
                         Xem thêm
                     </button>
                 </div>
-            </section>
+            </section> -->
         </div>
     </main>
 </body>

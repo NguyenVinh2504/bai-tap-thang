@@ -1,0 +1,47 @@
+/* Bé hơn xl là  Lg */
+/* 991.9 < lg < 1199.98px = xl */
+
+@media screen and (max-width: 1199.98px) {}
+
+/* Bé hơn lg là  Md */
+/* 768 < md < 992px = lg */
+@media screen and (max-width: 991.98px) {
+    .header__inner {
+        position: relative;
+        justify-content: space-between;
+    }
+
+    .header__logo-text {
+        display: none;
+    }
+
+    .header__logo {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    .header__icon-search {
+        margin-left: auto;
+        width: 30px;
+        height: 30px;
+    }
+
+    .header__img-search {
+        width: 100%;
+        height: 100%;
+    }
+}
+
+/* Bé hơn Md là  Sm */
+/* 576 < sm < 768px = md */
+@media screen and (max-width: 767.98px) {
+    .header__action-group {
+        width: 150px;
+    }
+}
+
+/* Bé hơn Sm là  Xs */
+/* 0 < xs < 576px = sm */
+@media screen and (max-width: 575.98px) {}
