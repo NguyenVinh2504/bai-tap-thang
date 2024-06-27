@@ -22,7 +22,7 @@
 }
 
 .container {
-    width: 1368px;
+    width: 1140px;
 }
 
 .row {
@@ -239,7 +239,7 @@
     --grid-gutter-y: 90px;
 }
 
-@media screen and (max-width: 1399.98px) {
+/* @media screen and (max-width: 1399.98px) {
     .container {
         width: 1140px;
     }
@@ -441,7 +441,7 @@
     .gy-xxl-5 {
         --grid-gutter-y: 90px;
     }
-}
+} */
 
 @media screen and (max-width: 1199.98px) {
     .container {

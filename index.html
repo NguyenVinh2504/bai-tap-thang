@@ -27,28 +27,569 @@
                 <div class="search-bar header__search-bar">
                     <input type="text" class="search-bar__input" placeholder="Tìm kiếm">
                     <div class="search-bar__separate"></div>
-                    <button class="btn search-bar__btn">
+                    <button class="btn btn--icon search-bar__btn">
                         <img src="./assets/icons/search-icon.svg" alt="" class="search-bar__icon">
                     </button>
                 </div>
 
                 <!-- Action  -->
                 <div class="header__action-group">
-                    <button class="btn header__action-btn">
+                    <button class="btn btn--icon header__action-btn">
                         <img src="./assets/icons/heart.svg" alt="" class="header__action-icon">
                     </button>
                     <div class="header__action-separate"></div>
-                    <button class="btn header__action-btn">
+                    <button class="btn btn--icon header__action-btn">
                         <img src="./assets/icons/shopping-cart.svg" alt="" class="header__action-icon">
                     </button>
                     <div class="header__action-separate"></div>
-                    <button class="btn header__action-btn">
+                    <button class="btn btn--icon header__action-btn">
                         <img src="./assets/icons/user.svg" alt="" class="header__action-icon">
                     </button>
                 </div>
             </div>
         </div>
+        <nav class="header__navbar">
+            <div class="container">
+                <div class="row gy-0">
+                    <div class="col-2">
+                        <a class="header__nav-link t-h4" href="#!">Điện thoại</a>
+                    </div>
+                    <div class="col-2">
+                        <a class="header__nav-link t-h4" href="#!">Laptop,PC</a>
+                    </div>
+                    <div class="col-2">
+                        <a class="header__nav-link t-h4" href="#!">TV</a>
+                    </div>
+                    <div class="col-2">
+                        <a class="header__nav-link t-h4" href="#!">Tablet</a>
+                    </div>
+                    <div class="col-2">
+                        <a class="header__nav-link t-h4" href="#!">Hỗ trợ</a>
+                    </div>
+                    <div class="col-2">
+                        <a class="header__nav-link t-h4" href="#!">Liên hệ</a>
+                    </div>
+                </div>
+            </div>
+        </nav>
     </header>
+    <main class="product">
+        <div class="container">
+            <!-- Breadcrumbs -->
+            <ul class="breadcrumbs product__breadcrumbs">
+                <li class="breadcrumbs__item">
+                    <a href="#!" class="breadcrumbs__link t-h5">
+                        Trang chủ
+                        <span class="breadcrumbs__icon">/</span>
+                    </a>
+                </li>
+                <li class="breadcrumbs__item">
+                    <a href="#!" class="breadcrumbs__link breadcrumbs__link--active t-h5">
+                        Điện thoại
+                    </a>
+                </li>
+            </ul>
+
+            <!-- Brand -->
+            <div class="brand">
+                <div class="row gy-0">
+                    <div class="col-2">
+                        <button class="btn brand__btn t-h4">
+                            <div class="brand__btn-inner">
+                                <span>iPhone</span>
+                            </div>
+                        </button>
+                    </div>
+                    <div class="col-2">
+                        <button class="btn brand__btn t-h4">
+                            <div class="brand__btn-inner">
+                                <span>OPPO</span>
+                            </div>
+                        </button>
+                    </div>
+                    <div class="col-2">
+                        <button class="btn brand__btn t-h4">
+                            <div class="brand__btn-inner">
+                                <span>SAMSUNG</span>
+                            </div>
+                        </button>
+                    </div>
+                    <div class="col-2">
+                        <button class="btn brand__btn t-h4">
+                            <div class="brand__btn-inner">
+                                <span>XIAOMI</span>
+                            </div>
+                        </button>
+                    </div>
+                    <div class="col-2">
+                        <button class="btn brand__btn t-h4">
+                            <div class="brand__btn-inner">
+                                <span>REALME</span>
+                            </div>
+                        </button>
+                    </div>
+                    <div class="col-2">
+                        <button class="btn brand__btn t-h4">
+                            <div class="brand__btn-inner">
+                                <span>NOKIA</span>
+                            </div>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Filter -->
+            <div class="filter-product">
+                <button class="btn btn--icon filter-product__btn">
+                    <img src="./assets/icons/filter.svg" alt="" class="filter-product__icon">
+                </button>
+
+                <button class="form__select">
+                    <span class="form__select-text t-h5">Select</span>
+                    <img src="./assets/icons/arrow.svg" alt="" class="form__select-icon">
+                </button>
+            </div>
+
+            <!-- Product -->
+            <section class="product__container">
+                <h2 class="product__heading d-h3">Iphone</h2>
+                <div class="row row-cols-4">
+                    <div class="col">
+                        <article class="product-card">
+                            <a href="#!">
+                                <div class="product-card__img-wrap">
+                                    <img src="./assets/img/product/ip15promax.png" alt="" class="product-card__img">
+                                </div>
+                            </a>
+                            <div class="product-card__info">
+                                <a href="#!">
+                                    <h3 class="product-card__heading d-h4">IPhone 15 Pro max</h3>
+                                </a>
+                                <span class="t-h5 product-card__price">29.390.000đ</span>
+                            </div>
+                            <button class="btn btn--icon product-card__heart">
+                                <img src="./assets/icons/heart.svg" alt="" class="product-card__heart-icon">
+                            </button>
+                        </article>
+                    </div>
+
+                    <div class="col">
+                        <article class="product-card">
+                            <div class="product-card__img-wrap">
+                                <img src="./assets/img/product/ip15promax.png" alt="" class="product-card__img">
+                            </div>
+                            <div class="product-card__info">
+                                <a href="#!">
+                                    <h3 class="product-card__heading d-h4">IPhone 15 Pro max</h3>
+                                </a>
+                                <span class="t-h5 product-card__price">29.390.000đ</span>
+                            </div>
+                            <button class="btn btn--icon product-card__heart">
+                                <img src="./assets/icons/heart.svg" alt="" class="product-card__heart-icon">
+                            </button>
+                        </article>
+                    </div>
+
+                    <div class="col">
+                        <article class="product-card">
+                            <div class="product-card__img-wrap">
+                                <img src="./assets/img/product/ip15promax.png" alt="" class="product-card__img">
+                            </div>
+                            <div class="product-card__info">
+                                <a href="#!">
+                                    <h3 class="product-card__heading d-h4">IPhone 15 Pro max</h3>
+                                </a>
+                                <span class="t-h5 product-card__price">29.390.000đ</span>
+                            </div>
+                            <button class="btn btn--icon product-card__heart">
+                                <img src="./assets/icons/heart.svg" alt="" class="product-card__heart-icon">
+                            </button>
+                        </article>
+                    </div>
+
+                    <div class="col">
+                        <article class="product-card">
+                            <div class="product-card__img-wrap">
+                                <img src="./assets/img/product/ip15promax.png" alt="" class="product-card__img">
+                            </div>
+                            <div class="product-card__info">
+                                <a href="#!">
+                                    <h3 class="product-card__heading d-h4">IPhone 15 Pro max</h3>
+                                </a>
+                                <span class="t-h5 product-card__price">29.390.000đ</span>
+                            </div>
+                            <button class="btn btn--icon product-card__heart">
+                                <img src="./assets/icons/heart.svg" alt="" class="product-card__heart-icon">
+                            </button>
+                        </article>
+                    </div>
+
+                    <div class="col">
+                        <article class="product-card">
+                            <div class="product-card__img-wrap">
+                                <img src="./assets/img/product/ip15promax.png" alt="" class="product-card__img">
+                            </div>
+                            <div class="product-card__info">
+                                <a href="#!">
+                                    <h3 class="product-card__heading d-h4">IPhone 15 Pro max</h3>
+                                </a>
+                                <span class="t-h5 product-card__price">29.390.000đ</span>
+                            </div>
+                            <button class="btn btn--icon product-card__heart">
+                                <img src="./assets/icons/heart.svg" alt="" class="product-card__heart-icon">
+                            </button>
+                        </article>
+                    </div>
+
+                    <div class="col">
+                        <article class="product-card">
+                            <div class="product-card__img-wrap">
+                                <img src="./assets/img/product/ip15promax.png" alt="" class="product-card__img">
+                            </div>
+                            <div class="product-card__info">
+                                <a href="#!">
+                                    <h3 class="product-card__heading d-h4">IPhone 15 Pro max</h3>
+                                </a>
+                                <span class="t-h5 product-card__price">29.390.000đ</span>
+                            </div>
+                            <button class="btn btn--icon product-card__heart">
+                                <img src="./assets/icons/heart.svg" alt="" class="product-card__heart-icon">
+                            </button>
+                        </article>
+                    </div>
+                    <div class="col">
+                        <article class="product-card">
+                            <div class="product-card__img-wrap">
+                                <img src="./assets/img/product/ip15promax.png" alt="" class="product-card__img">
+                            </div>
+                            <div class="product-card__info">
+                                <a href="#!">
+                                    <h3 class="product-card__heading d-h4">IPhone 15 Pro max</h3>
+                                </a>
+                                <span class="t-h5 product-card__price">29.390.000đ</span>
+                            </div>
+                            <button class="btn btn--icon product-card__heart">
+                                <img src="./assets/icons/heart.svg" alt="" class="product-card__heart-icon">
+                            </button>
+                        </article>
+                    </div>
+                    <div class="col">
+                        <article class="product-card">
+                            <div class="product-card__img-wrap">
+                                <img src="./assets/img/product/ip15promax.png" alt="" class="product-card__img">
+                            </div>
+                            <div class="product-card__info">
+                                <a href="#!">
+                                    <h3 class="product-card__heading d-h4">IPhone 15 Pro max</h3>
+                                </a>
+                                <span class="t-h5 product-card__price">29.390.000đ</span>
+                            </div>
+                            <button class="btn btn--icon product-card__heart">
+                                <img src="./assets/icons/heart.svg" alt="" class="product-card__heart-icon">
+                            </button>
+                        </article>
+                    </div>
+                </div>
+                <div class="product__bottom">
+                    <button class="btn btn--rounded product__btn-more t-h3">
+                        Xem thêm
+                    </button>
+                </div>
+            </section>
+
+            <section class="product__container">
+                <h2 class="product__heading d-h3">SAMSUNG</h2>
+                <div class="row row-cols-4">
+                    <div class="col">
+                        <article class="product-card">
+                            <a href="#!">
+                                <div class="product-card__img-wrap">
+                                    <img src="./assets/img/product/ip15promax.png" alt="" class="product-card__img">
+                                </div>
+                            </a>
+                            <div class="product-card__info">
+                                <a href="#!">
+                                    <h3 class="product-card__heading d-h4">IPhone 15 Pro max</h3>
+                                </a>
+                                <span class="t-h5 product-card__price">29.390.000đ</span>
+                            </div>
+                            <button class="btn btn--icon product-card__heart">
+                                <img src="./assets/icons/heart.svg" alt="" class="product-card__heart-icon">
+                            </button>
+                        </article>
+                    </div>
+
+                    <div class="col">
+                        <article class="product-card">
+                            <div class="product-card__img-wrap">
+                                <img src="./assets/img/product/ip15promax.png" alt="" class="product-card__img">
+                            </div>
+                            <div class="product-card__info">
+                                <a href="#!">
+                                    <h3 class="product-card__heading d-h4">IPhone 15 Pro max</h3>
+                                </a>
+                                <span class="t-h5 product-card__price">29.390.000đ</span>
+                            </div>
+                            <button class="btn btn--icon product-card__heart">
+                                <img src="./assets/icons/heart.svg" alt="" class="product-card__heart-icon">
+                            </button>
+                        </article>
+                    </div>
+
+                    <div class="col">
+                        <article class="product-card">
+                            <div class="product-card__img-wrap">
+                                <img src="./assets/img/product/ip15promax.png" alt="" class="product-card__img">
+                            </div>
+                            <div class="product-card__info">
+                                <a href="#!">
+                                    <h3 class="product-card__heading d-h4">IPhone 15 Pro max</h3>
+                                </a>
+                                <span class="t-h5 product-card__price">29.390.000đ</span>
+                            </div>
+                            <button class="btn btn--icon product-card__heart">
+                                <img src="./assets/icons/heart.svg" alt="" class="product-card__heart-icon">
+                            </button>
+                        </article>
+                    </div>
+
+                    <div class="col">
+                        <article class="product-card">
+                            <div class="product-card__img-wrap">
+                                <img src="./assets/img/product/ip15promax.png" alt="" class="product-card__img">
+                            </div>
+                            <div class="product-card__info">
+                                <a href="#!">
+                                    <h3 class="product-card__heading d-h4">IPhone 15 Pro max</h3>
+                                </a>
+                                <span class="t-h5 product-card__price">29.390.000đ</span>
+                            </div>
+                            <button class="btn btn--icon product-card__heart">
+                                <img src="./assets/icons/heart.svg" alt="" class="product-card__heart-icon">
+                            </button>
+                        </article>
+                    </div>
+
+                    <div class="col">
+                        <article class="product-card">
+                            <div class="product-card__img-wrap">
+                                <img src="./assets/img/product/ip15promax.png" alt="" class="product-card__img">
+                            </div>
+                            <div class="product-card__info">
+                                <a href="#!">
+                                    <h3 class="product-card__heading d-h4">IPhone 15 Pro max</h3>
+                                </a>
+                                <span class="t-h5 product-card__price">29.390.000đ</span>
+                            </div>
+                            <button class="btn btn--icon product-card__heart">
+                                <img src="./assets/icons/heart.svg" alt="" class="product-card__heart-icon">
+                            </button>
+                        </article>
+                    </div>
+
+                    <div class="col">
+                        <article class="product-card">
+                            <div class="product-card__img-wrap">
+                                <img src="./assets/img/product/ip15promax.png" alt="" class="product-card__img">
+                            </div>
+                            <div class="product-card__info">
+                                <a href="#!">
+                                    <h3 class="product-card__heading d-h4">IPhone 15 Pro max</h3>
+                                </a>
+                                <span class="t-h5 product-card__price">29.390.000đ</span>
+                            </div>
+                            <button class="btn btn--icon product-card__heart">
+                                <img src="./assets/icons/heart.svg" alt="" class="product-card__heart-icon">
+                            </button>
+                        </article>
+                    </div>
+                    <div class="col">
+                        <article class="product-card">
+                            <div class="product-card__img-wrap">
+                                <img src="./assets/img/product/ip15promax.png" alt="" class="product-card__img">
+                            </div>
+                            <div class="product-card__info">
+                                <a href="#!">
+                                    <h3 class="product-card__heading d-h4">IPhone 15 Pro max</h3>
+                                </a>
+                                <span class="t-h5 product-card__price">29.390.000đ</span>
+                            </div>
+                            <button class="btn btn--icon product-card__heart">
+                                <img src="./assets/icons/heart.svg" alt="" class="product-card__heart-icon">
+                            </button>
+                        </article>
+                    </div>
+                    <div class="col">
+                        <article class="product-card">
+                            <div class="product-card__img-wrap">
+                                <img src="./assets/img/product/ip15promax.png" alt="" class="product-card__img">
+                            </div>
+                            <div class="product-card__info">
+                                <a href="#!">
+                                    <h3 class="product-card__heading d-h4">IPhone 15 Pro max</h3>
+                                </a>
+                                <span class="t-h5 product-card__price">29.390.000đ</span>
+                            </div>
+                            <button class="btn btn--icon product-card__heart">
+                                <img src="./assets/icons/heart.svg" alt="" class="product-card__heart-icon">
+                            </button>
+                        </article>
+                    </div>
+                </div>
+                <div class="product__bottom">
+                    <button class="btn btn--rounded product__btn-more t-h3">
+                        Xem thêm
+                    </button>
+                </div>
+            </section>
+
+            <section class="product__container">
+                <h2 class="product__heading d-h3">XIAOMI</h2>
+                <div class="row row-cols-4">
+                    <div class="col">
+                        <article class="product-card">
+                            <a href="#!">
+                                <div class="product-card__img-wrap">
+                                    <img src="./assets/img/product/ip15promax.png" alt="" class="product-card__img">
+                                </div>
+                            </a>
+                            <div class="product-card__info">
+                                <a href="#!">
+                                    <h3 class="product-card__heading d-h4">IPhone 15 Pro max</h3>
+                                </a>
+                                <span class="t-h5 product-card__price">29.390.000đ</span>
+                            </div>
+                            <button class="btn btn--icon product-card__heart">
+                                <img src="./assets/icons/heart.svg" alt="" class="product-card__heart-icon">
+                            </button>
+                        </article>
+                    </div>
+
+                    <div class="col">
+                        <article class="product-card">
+                            <div class="product-card__img-wrap">
+                                <img src="./assets/img/product/ip15promax.png" alt="" class="product-card__img">
+                            </div>
+                            <div class="product-card__info">
+                                <a href="#!">
+                                    <h3 class="product-card__heading d-h4">IPhone 15 Pro max</h3>
+                                </a>
+                                <span class="t-h5 product-card__price">29.390.000đ</span>
+                            </div>
+                            <button class="btn btn--icon product-card__heart">
+                                <img src="./assets/icons/heart.svg" alt="" class="product-card__heart-icon">
+                            </button>
+                        </article>
+                    </div>
+
+                    <div class="col">
+                        <article class="product-card">
+                            <div class="product-card__img-wrap">
+                                <img src="./assets/img/product/ip15promax.png" alt="" class="product-card__img">
+                            </div>
+                            <div class="product-card__info">
+                                <a href="#!">
+                                    <h3 class="product-card__heading d-h4">IPhone 15 Pro max</h3>
+                                </a>
+                                <span class="t-h5 product-card__price">29.390.000đ</span>
+                            </div>
+                            <button class="btn btn--icon product-card__heart">
+                                <img src="./assets/icons/heart.svg" alt="" class="product-card__heart-icon">
+                            </button>
+                        </article>
+                    </div>
+
+                    <div class="col">
+                        <article class="product-card">
+                            <div class="product-card__img-wrap">
+                                <img src="./assets/img/product/ip15promax.png" alt="" class="product-card__img">
+                            </div>
+                            <div class="product-card__info">
+                                <a href="#!">
+                                    <h3 class="product-card__heading d-h4">IPhone 15 Pro max</h3>
+                                </a>
+                                <span class="t-h5 product-card__price">29.390.000đ</span>
+                            </div>
+                            <button class="btn btn--icon product-card__heart">
+                                <img src="./assets/icons/heart.svg" alt="" class="product-card__heart-icon">
+                            </button>
+                        </article>
+                    </div>
+
+                    <div class="col">
+                        <article class="product-card">
+                            <div class="product-card__img-wrap">
+                                <img src="./assets/img/product/ip15promax.png" alt="" class="product-card__img">
+                            </div>
+                            <div class="product-card__info">
+                                <a href="#!">
+                                    <h3 class="product-card__heading d-h4">IPhone 15 Pro max</h3>
+                                </a>
+                                <span class="t-h5 product-card__price">29.390.000đ</span>
+                            </div>
+                            <button class="btn btn--icon product-card__heart">
+                                <img src="./assets/icons/heart.svg" alt="" class="product-card__heart-icon">
+                            </button>
+                        </article>
+                    </div>
+
+                    <div class="col">
+                        <article class="product-card">
+                            <div class="product-card__img-wrap">
+                                <img src="./assets/img/product/ip15promax.png" alt="" class="product-card__img">
+                            </div>
+                            <div class="product-card__info">
+                                <a href="#!">
+                                    <h3 class="product-card__heading d-h4">IPhone 15 Pro max</h3>
+                                </a>
+                                <span class="t-h5 product-card__price">29.390.000đ</span>
+                            </div>
+                            <button class="btn btn--icon product-card__heart">
+                                <img src="./assets/icons/heart.svg" alt="" class="product-card__heart-icon">
+                            </button>
+                        </article>
+                    </div>
+                    <div class="col">
+                        <article class="product-card">
+                            <div class="product-card__img-wrap">
+                                <img src="./assets/img/product/ip15promax.png" alt="" class="product-card__img">
+                            </div>
+                            <div class="product-card__info">
+                                <a href="#!">
+                                    <h3 class="product-card__heading d-h4">IPhone 15 Pro max</h3>
+                                </a>
+                                <span class="t-h5 product-card__price">29.390.000đ</span>
+                            </div>
+                            <button class="btn btn--icon product-card__heart">
+                                <img src="./assets/icons/heart.svg" alt="" class="product-card__heart-icon">
+                            </button>
+                        </article>
+                    </div>
+                    <div class="col">
+                        <article class="product-card">
+                            <div class="product-card__img-wrap">
+                                <img src="./assets/img/product/ip15promax.png" alt="" class="product-card__img">
+                            </div>
+                            <div class="product-card__info">
+                                <a href="#!">
+                                    <h3 class="product-card__heading d-h4">IPhone 15 Pro max</h3>
+                                </a>
+                                <span class="t-h5 product-card__price">29.390.000đ</span>
+                            </div>
+                            <button class="btn btn--icon product-card__heart">
+                                <img src="./assets/icons/heart.svg" alt="" class="product-card__heart-icon">
+                            </button>
+                        </article>
+                    </div>
+                </div>
+                <div class="product__bottom">
+                    <button class="btn btn--rounded product__btn-more t-h3">
+                        Xem thêm
+                    </button>
+                </div>
+            </section>
+        </div>
+    </main>
 </body>
 
 </html>
