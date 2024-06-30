@@ -122,13 +122,6 @@ label {
     column-gap: 6px;
 }
 
-.logo__text {
-    color: #000;
-    font-size: 2.4rem;
-    font-style: normal;
-    font-weight: 700;
-}
-
 /* Form */
 .form__select {
     width: min(320px, 100%);
@@ -332,7 +325,7 @@ label {
     position: absolute;
     /* border-radius: 1000px; */
     background: var(--color1-3);
-    transition: width 0.5s ease-in-out;
+    transition: width 1s cubic-bezier(0.23, 1, 0.32, 1)
 }
 
 .brand__btn-inner:hover::after {
@@ -416,4 +409,117 @@ label {
 .product__btn-more {
     min-width: 255px;
     height: 36px;
+}
+
+/* Footer */
+.footer {
+    background: var(--color2-2);
+}
+
+.footer__wrapper {
+    display: grid;
+    padding: 39px 0 22px;
+    grid-template-columns: 475fr 634fr;
+}
+
+.footer__logo {
+    column-gap: 27px;
+}
+
+.footer__logo-img {
+    height: 170px;
+}
+
+.footer__socials {
+    display: flex;
+    column-gap: 14px;
+    margin-top: 77px;
+    margin-bottom: 15px;
+    align-items: center;
+}
+
+.footer__social-link {
+    display: flex;
+}
+
+.footer__social-icon {
+    width: 28px;
+}
+
+.footer__payments {
+    display: flex;
+    column-gap: 22px;
+    align-items: center;
+}
+
+.footer__payments .footer__payment-link:nth-child(1) .footer__payment-icon {
+    height: 40px;
+}
+
+.footer__payments .footer__payment-link:nth-child(2) .footer__payment-icon,
+.footer__payments .footer__payment-link:nth-child(3) .footer__payment-icon {
+    height: 29px;
+}
+
+.footer__right {
+    display: grid;
+    grid-template-columns: 4fr 3fr;
+    grid-template-rows: repeat(3, auto);
+    align-items: center;
+}
+
+.footer__right .footer__col:last-child,
+.footer__separate {
+    grid-column: 1 / 3;
+}
+
+.footer__separate {
+    display: flex;
+    margin-top: 43px;
+    margin-bottom: 23px;
+}
+
+.footer__separate img {
+    width: 100%;
+}
+
+.footer__heading {
+    font-size: 2.4rem;
+    font-weight: 700;
+    line-height: normal;
+    margin-bottom: calc(15px - 6.5px);
+}
+
+.footer__link {
+    font-size: 1.6rem;
+
+}
+
+.footer__text {
+    font-size: 2rem;
+    text-align: center;
+}
+
+.footer__link,
+.footer__text {
+    font-weight: 300;
+    line-height: normal;
+    padding: 6.5px 0;
+    display: inline-block;
+}
+
+.footer__label {
+    font-size: 2.4rem;
+    font-weight: 700;
+    line-height: normal;
+}
+
+.footer__text {
+    display: inline-block;
+}
+
+.footer__bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
