@@ -31,7 +31,6 @@ function toggle() {
                     } else {
                         document.body.style.overflow = 'hidden'
                         document.body.style.paddingRight = `${paddingScroll}px`
-                        document.documentElement.style.overflow = 'hidden'
                     }
                     window.addEventListener('resize', debounce(() => {
                         if (!(window.innerWidth > 991)) return;
