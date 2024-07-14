@@ -88,6 +88,7 @@
     .footer__copyright {
         font-size: 1.6rem;
     }
+
 }
 
 /* Bé hơn Md là  Sm */
@@ -142,8 +143,21 @@
     .footer__payments-bottom {
         column-gap: 14px;
     }
+
+    .side-bar__inner {
+        right: 40%;
+    }
+
 }
 
 /* Bé hơn Sm là  Xs */
 /* 0 < xs < 576px = sm */
-@media screen and (max-width: 575.98px) {}
+@media screen and (max-width: 575.98px) {
+    .side-bar__inner {
+        right: 10%;
+    }
+
+    .side-bar__act-btn {
+        flex-grow: 1;
+    }
+}

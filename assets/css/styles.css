@@ -523,3 +523,79 @@ label {
     justify-content: space-between;
     align-items: center;
 }
+
+.side-bar {
+    position: fixed;
+    /* background: white; */
+    z-index: 10;
+    inset: 0px;
+    border: 0.5px solid rgb(54, 54, 54);
+    transition: all 1s cubic-bezier(0.23, 1, 0.32, 1);
+
+}
+
+.side-bar__inner {
+    position: fixed;
+    z-index: 11;
+    background: white;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 50%;
+    padding: 20px;
+    transition: all 1s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.side-bar__act {
+    display: flex;
+    column-gap: 20px;
+    row-gap: 10px;
+    flex-wrap: wrap;
+}
+
+.side-bar__act-btn {
+    min-width: auto;
+    font-size: 1.2rem;
+    width: auto;
+    height: 45px;
+    /* flex-grow: 1; */
+    flex-basis: 120px;
+}
+
+.side-bar__list {
+    padding-top: 30px;
+}
+
+.side-bar__link {
+    display: block;
+    font-size: 1.6rem;
+    font-weight: 300;
+    line-height: normal;
+    padding: 10px 0;
+}
+
+.side-bar__overlay {
+    position: fixed;
+    inset: 0px;
+    background: #000;
+    opacity: 0.5;
+    cursor: pointer;
+}
+
+.side-bar.hide {
+    visibility: hidden;
+    opacity: 0;
+}
+
+.side-bar.show {
+    visibility: visible;
+    opacity: 1;
+}
+
+.side-bar.hide .side-bar__inner {
+    transform: translateX(-100%);
+}
+
+.side-bar.show .side-bar__inner {
+    transform: translateX(0px);
+}

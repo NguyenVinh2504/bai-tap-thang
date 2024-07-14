@@ -28,9 +28,52 @@
         <div class="container">
             <div class="header__inner">
                 <!-- More  -->
-                <button class="btn btn--icon header__more d-lg-flex d-none">
+                <button class="btn btn--icon header__more d-lg-flex d-none js-toggle" target-toggle="side-bar"
+                    no-scroll="true">
                     <img src="./assets/icons/more.svg" alt="">
                 </button>
+
+                <div class="side-bar hide d-lg-flex d-none" id="side-bar">
+                    <div class="side-bar__inner">
+                        <div class="side-bar__act">
+                            <button class="btn brand__btn t-h4 side-bar__act-btn">
+                                <div class="brand__btn-inner">
+                                    <span>Đăng Nhập</span>
+                                </div>
+                            </button>
+                            <button class="btn brand__btn t-h4 side-bar__act-btn">
+                                <div class="brand__btn-inner">
+                                    <span>Đăng Ký</span>
+                                </div>
+                            </button>
+                        </div>
+                        <ul class="side-bar__list">
+                            <li class="side-bar__item">
+                                <a href="#!" class="side-bar__link">Yêu thích</a>
+                            </li>
+                            <li class="side-bar__item">
+                                <a href="#!" class="side-bar__link">Điện thoại</a>
+                            </li>
+                            <li class="side-bar__item">
+                                <a href="#!" class="side-bar__link">Laptop, PC</a>
+                            </li>
+                            <li class="side-bar__item">
+                                <a href="#!" class="side-bar__link">Điện thoại</a>
+                            </li>
+                            <li class="side-bar__item">
+                                <a href="#!" class="side-bar__link">Tablet</a>
+                            </li>
+                            <li class="side-bar__item">
+                                <a href="#!" class="side-bar__link">Hỗ trợ</a>
+                            </li>
+                            <li class="side-bar__item">
+                                <a href="#!" class="side-bar__link">Liên hệ</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="side-bar__overlay js-toggle" target-toggle="side-bar" no-scroll="true"></div>
+                </div>
                 <!-- Logo  -->
                 <a href="/">
                     <div class="logo header__logo">
@@ -748,6 +791,8 @@
             </div>
         </div>
     </Footer>
+
+    <script src="./assets/js/script.js"></script>
 </body>
 
 </html>
