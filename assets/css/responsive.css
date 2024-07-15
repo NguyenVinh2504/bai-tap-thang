@@ -148,6 +148,21 @@
         right: 40%;
     }
 
+    .filter {
+        position: fixed;
+        inset: 0;
+        width: initial;
+    }
+
+    .filter__main {
+        max-height: calc(100vh - 150px);
+        overflow: auto;
+    }
+
+    .filter__action {
+        position: sticky;
+        bottom: 10px;
+    }
 }
 
 /* Bé hơn Sm là  Xs */
@@ -160,4 +175,5 @@
     .side-bar__act-btn {
         flex-grow: 1;
     }
+
 }
