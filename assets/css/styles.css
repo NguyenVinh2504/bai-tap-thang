@@ -678,11 +678,6 @@ label {
     filter: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(0%) hue-rotate(170deg) brightness(106%) contrast(101%);
 }
 
-.filter * {
-    /* border: 1px dotted red; */
-
-}
-
 .filter-wrap {
     position: relative;
 }
