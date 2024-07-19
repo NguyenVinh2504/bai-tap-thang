@@ -207,9 +207,9 @@ function renderProduct(container, list) {
                 </div>`
     }).join('')
 
-    containerEl.innerHTML = html
+    containerEl.insertAdjacentHTML('beforeend', html)
 }
 
 renderProduct('#listIphone', iphoneProductList)
-renderProduct('#listSamsung', listXiaomi)
-renderProduct('#listXiaomi', samsungListProduct)
+renderProduct('#listSamsung', samsungListProduct)
+renderProduct('#listXiaomi', listXiaomi)

@@ -232,7 +232,7 @@ label {
     background: #F5F5F5;
     position: sticky;
     top: 0;
-    z-index: 99;
+    z-index: 1000;
 }
 
 .header__inner {
@@ -315,13 +315,14 @@ label {
     justify-content: center;
     overflow: hidden;
     border-radius: 1000px;
+    z-index: 1;
 }
 
-.brand__btn span {
-    z-index: 2;
+.brand__btn-inner span {
+    z-index: 1;
 }
 
-.brand__btn-inner::after {
+.brand__btn-inner::before {
     content: "";
     display: inline-block;
     height: 100%;
@@ -333,7 +334,7 @@ label {
     transition: width 1s var(--animation-effect)
 }
 
-.brand__btn-inner:hover::after {
+.brand__btn-inner:hover::before {
     right: initial;
     left: 0;
     width: 100%;
@@ -685,7 +686,7 @@ label {
 
 .filter {
     position: absolute;
-    z-index: 100;
+    z-index: 1001;
     background: var(--color2-2);
     width: 445px;
     box-shadow: 0px 4px 15px 7px rgba(0, 0, 0, 0.08);
