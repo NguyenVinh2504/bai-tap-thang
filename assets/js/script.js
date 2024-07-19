@@ -213,3 +213,44 @@ function renderProduct(container, list) {
 renderProduct('#listIphone', iphoneProductList)
 renderProduct('#listSamsung', samsungListProduct)
 renderProduct('#listXiaomi', listXiaomi)
+
+
+const formSlider = document.querySelector('#filter__form-slider')
+// const labelPriceMin = document.querySelector('.filter__price-min') as HTMLSpanElement
+const labelPriceMin = document.querySelector('.filter__price-min')
+// const labelPriceValueMax = document.querySelector('.filter__price-max') as HTMLSpanElement
+const labelPriceMax = document.querySelector('.filter__price-max')
+
+const progress = document.querySelector('.filter__progress')
+
+const maxRangeValue = 15000000
+const baseValue = 5000000
+const vnd = new Intl.NumberFormat('vi-VN', {
+    notation: 'compact',
+    maximumFractionDigits: 2
+})
+const [rangeMin, rangeMax] = formSlider.querySelectorAll('.filter__input-range')
+let priceMin = rangeMin.valueAsNumber, priceMax = rangeMax.valueAsNumber
+
+function updateRangeUi(priceMinValue, priceMaxValue) {
+    labelPriceMin.textContent = `${vnd.format(priceMinValue)}`
+    progress.style.left = `${((priceMinValue - baseValue) / maxRangeValue) * 100}%`
+    labelPriceMax.textContent = `${vnd.format(priceMaxValue)}`
+    progress.style.right = `${100 - (priceMaxValue - baseValue) / maxRangeValue * 100}%`
+}
+
+updateRangeUi(priceMin, priceMax)
+formSlider.addEventListener('input', function (e) {
+    // const inputRange = e.target.closest('.filter__input-range') as HTMLInputElement
+    const inputRange = e.target.closest('.filter__input-range')
+    if (inputRange) {
+        if ((rangeMax.valueAsNumber - rangeMin.valueAsNumber) >= 2000000) {
+            priceMin = rangeMin.valueAsNumber, priceMax = rangeMax.valueAsNumber
+            updateRangeUi(priceMin, priceMax)
+        }
+        else {
+            rangeMin.value = priceMin
+            rangeMax.value = priceMax
+        }
+    }
+})

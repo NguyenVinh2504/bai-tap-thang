@@ -234,10 +234,23 @@
                             <div class="filter__price">
                                 <div class="filter__price-header">
                                     <label class="filter__price-label">Giá</label>
-                                    <p class="filter__price-num">$10 - $50</p>
+                                    <p class="filter__price-num">
+                                        <span class="filter__price-min"></span>
+                                        -
+                                        <span class="filter__price-max"></span>
+                                    </p>
                                 </div>
 
-                                <div class="filter__form-slider" style="--min-price: 10px; --max-price: 50px"></div>
+                                <div class="filter__form-slider" id="filter__form-slider"
+                                    style="--min-price: 10px; --max-price: 50px">
+                                    <div class="filter__progress" id="filter__progress"></div>
+                                    <input type="range" name="" min="5000000" max="20000000" value="5000000"
+                                        step="1000000" class="filter__input-range filter_range-min"
+                                        id="filter_range-min" data-type-range="range-min">
+                                    <input type="range" name="" min="5000000" max="20000000" value="20000000"
+                                        step="1000000" class="filter__input-range filter_range-max"
+                                        id="filter_range-max" data-type-range="range-max">
+                                </div>
                             </div>
                             <div class="filter__separate"></div>
                             <div class="filter__producer">
