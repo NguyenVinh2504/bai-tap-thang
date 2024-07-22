@@ -1,3 +1,20 @@
+@media (hover: none) {
+
+    .brand__btn-inner:hover::before {
+        right: initial;
+        left: 0;
+        width: 0;
+    }
+
+    .filter__input-range::-webkit-slider-thumb:hover {
+        box-shadow: initial
+    }
+
+    .filter__input-range::-moz-range-thumb:hover {
+        box-shadow: initial
+    }
+}
+
 /* Bé hơn xl là  Lg */
 /* 991.9 < lg < 1199.98px = xl */
 
