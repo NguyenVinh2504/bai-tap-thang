@@ -13,6 +13,10 @@
     .filter__input-range::-moz-range-thumb:hover {
         box-shadow: initial
     }
+
+    .form__select-item:hover {
+        background: transparent;
+    }
 }
 
 /* Bé hơn xl là  Lg */

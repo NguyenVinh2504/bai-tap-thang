@@ -125,7 +125,7 @@ label {
 }
 
 /* Form */
-.form__select {
+.form__select-btn {
     width: min(320px, 100%);
     display: flex;
     justify-content: space-between;
@@ -135,12 +135,62 @@ label {
     padding-left: 30px;
     box-shadow: 0px 4px 20px -10px rgba(0, 0, 0, 0.25);
     cursor: pointer;
+    margin-left: auto;
+    user-select: none;
 }
 
-.form__select-text {
+.form__select-text,
+.form__select-item {
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
+}
+
+.form__select-container {
+    position: absolute;
+    top: 56px;
+    right: 0px;
+    width: min(320px, 100%);
+    border-radius: 20px;
+    border: 1px solid var(--color1-3);
+    background: var(--color2-1);
+    flex-shrink: 0;
+    padding: 10px;
+    z-index: 1;
+    transition: all 0.8s var(--animation-effect);
+}
+
+.form__select-container.hide {
+    visibility: hidden;
+    opacity: 0;
+}
+
+.form__select-item {
+    border-radius: 10px;
+    padding: 10px 30px;
+    color: #4A504B;
+    user-select: none;
+
+    font-size: 1.6rem;
+    font-weight: 400;
+    line-height: normal;
+    transition: all 0.5s var(--animation-effect);
+    cursor: pointer;
+    border: 2px solid transparent;
+}
+
+.form__select-item:hover {
+    background-color: rgba(153, 202, 255, 0.5);
+}
+
+.form__select-item--active {
+    border: 2px solid rgba(127, 189, 255, 0.388);
+    background-color: var(--color1-1) !important;
+    background-clip: padding-box;
+    cursor: initial;
+    box-shadow: 0px 4px 20px -10px rgba(0, 0, 0, 0.25);
 }
 
 /* button */
@@ -336,10 +386,15 @@ label {
     width: 100%;
 }
 
+.brand__btn-inner:active {
+    background: var(--color1-1);
+}
+
+.brand__btn-inner:active::before {
+    background: transparent;
+}
+
 .filter-product {
-    display: flex;
-    justify-content: space-between;
-    column-gap: 80px;
     padding: 30px 0;
     border-bottom: 1px solid var(--color1-4);
     margin-bottom: 15px;
@@ -389,8 +444,8 @@ label {
 
 .product-card__heading,
 .product-card__price {
-    -webkit-line-clamp: 1;
     -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
@@ -679,6 +734,9 @@ label {
 
 .filter-wrap {
     position: relative;
+    height: 100%;
+    display: flex;
+    align-items: center;
 }
 
 .filter {

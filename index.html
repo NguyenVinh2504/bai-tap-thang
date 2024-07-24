@@ -20,8 +20,8 @@
 
     <link rel="stylesheet" href="./assets/css/reset.css">
     <link rel="stylesheet" href="./assets/css/grid.css">
-    <!-- <link rel="stylesheet" href="./assets/css/styles.css"> -->
-    <link rel="stylesheet" href="./assets/css/styles.min.css">
+    <link rel="stylesheet" href="./assets/css/styles.css">
+    <!-- <link rel="stylesheet" href="./assets/css/styles.min.css"> -->
     <link rel="stylesheet" href="./assets/css/responsive.css">
 </head>
 
@@ -222,154 +222,169 @@
 
             <!-- Filter -->
             <div class="filter-product">
-                <div class="filter-wrap">
-                    <button class="btn btn--icon filter-product__btn js-toggle" target-toggle="filter"
-                        no-scroll="false">
-                        <img src="./assets/icons/filter.svg" alt="" class="filter-product__icon">
-                    </button>
-                    <div class="filter hide" id="filter">
-                        <button class="btn btn--icon filter__close-btn js-toggle" target-toggle="filter"
-                            no-scroll="false">
-                            <img src="./assets/icons/x-circle.svg" alt="" class="filter__close-btn-icon">
-                        </button>
-                        <div class="filter__main">
-                            <div class="filter__price">
-                                <div class="filter__price-header">
-                                    <label class="filter__price-label">Giá</label>
-                                    <p class="filter__price-num">
-                                        <span class="filter__price-min"></span>
-                                        -
-                                        <span class="filter__price-max"></span>
-                                    </p>
+                <div class="row">
+                    <div class="col-8 col-xl-8 col-lg-7 col-md-6 col-sm-4">
+                        <div class="filter-wrap">
+                            <button class="btn btn--icon filter-product__btn js-toggle" target-toggle="filter"
+                                no-scroll="false">
+                                <img src="./assets/icons/filter.svg" alt="" class="filter-product__icon">
+                            </button>
+                            <div class="filter hide" id="filter">
+                                <button class="btn btn--icon filter__close-btn js-toggle" target-toggle="filter"
+                                    no-scroll="false">
+                                    <img src="./assets/icons/x-circle.svg" alt="" class="filter__close-btn-icon">
+                                </button>
+                                <div class="filter__main">
+                                    <div class="filter__price">
+                                        <div class="filter__price-header">
+                                            <label class="filter__price-label">Giá</label>
+                                            <p class="filter__price-num">
+                                                <span class="filter__price-min"></span>
+                                                -
+                                                <span class="filter__price-max"></span>
+                                            </p>
+                                        </div>
+
+                                        <div class="filter__form-slider" id="filter__form-slider"
+                                            style="--min-price: 10px; --max-price: 50px">
+                                            <div class="filter__progress" id="filter__progress"></div>
+                                            <input type="range" name="" min="5000000" max="20000000" value="5000000"
+                                                step="1000000" class="filter__input-range filter_range-min"
+                                                id="filter_range-min" data-type-range="range-min">
+                                            <input type="range" name="" min="5000000" max="20000000" value="20000000"
+                                                step="1000000" class="filter__input-range filter_range-max"
+                                                id="filter_range-max" data-type-range="range-max">
+                                        </div>
+                                    </div>
+                                    <div class="filter__separate"></div>
+                                    <div class="filter__producer">
+                                        <label for="" class="filter__label">Hãng</label>
+                                        <div class="filter__form-group">
+                                            <div class="filter__list-btn">
+                                                <button class="btn brand__btn filter__btn-select">
+                                                    <div class="brand__btn-inner">
+                                                        <span>iPhone</span>
+                                                    </div>
+                                                </button>
+                                                <button class="btn brand__btn filter__btn-select">
+                                                    <div class="brand__btn-inner">
+                                                        <span>OPPO</span>
+                                                    </div>
+                                                </button>
+                                                <button class="btn brand__btn filter__btn-select">
+                                                    <div class="brand__btn-inner">
+                                                        <span>SAMSUNG</span>
+                                                    </div>
+                                                </button>
+                                                <button class="btn brand__btn filter__btn-select">
+                                                    <div class="brand__btn-inner">
+                                                        <span>XIAOMI</span>
+                                                    </div>
+                                                </button>
+                                                <button class="btn brand__btn filter__btn-select">
+                                                    <div class="brand__btn-inner">
+                                                        <span>VIVO</span>
+                                                    </div>
+                                                </button>
+                                                <button class="btn brand__btn filter__btn-select">
+                                                    <div class="brand__btn-inner">
+                                                        <span>REALME</span>
+                                                    </div>
+                                                </button>
+                                                <button class="btn brand__btn filter__btn-select">
+                                                    <div class="brand__btn-inner">
+                                                        <span>NOKIA</span>
+                                                    </div>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="filter__separate"></div>
+                                    <div class="filter__ram">
+                                        <label for="" class="filter__label">Ram</label>
+                                        <div class="filter__form-group">
+                                            <div class="filter__list-btn">
+                                                <button class="btn brand__btn filter__btn-select">
+                                                    <div class="brand__btn-inner">
+                                                        <span>3 GB</span>
+                                                    </div>
+                                                </button>
+                                                <button class="btn brand__btn filter__btn-select">
+                                                    <div class="brand__btn-inner">
+                                                        <span>4 GB</span>
+                                                    </div>
+                                                </button>
+                                                <button class="btn brand__btn filter__btn-select">
+                                                    <div class="brand__btn-inner">
+                                                        <span>8 GB</span>
+                                                    </div>
+                                                </button>
+                                                <button class="btn brand__btn filter__btn-select">
+                                                    <div class="brand__btn-inner">
+                                                        <span>12 GB</span>
+                                                    </div>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="filter__separate"></div>
+                                    <div class="filter__rom">
+                                        <label for="" class="filter__label">Dung lượng lưu trữ</label>
+                                        <div class="filter__form-group">
+                                            <div class="filter__list-btn">
+                                                <button class="btn brand__btn filter__btn-select">
+                                                    <div class="brand__btn-inner">
+                                                        <span>64 GB</span>
+                                                    </div>
+                                                </button>
+                                                <button class="btn brand__btn filter__btn-select filter__btn-select">
+                                                    <div class="brand__btn-inner">
+                                                        <span>128 GB</span>
+                                                    </div>
+                                                </button>
+                                                <button class="btn brand__btn filter__btn-select">
+                                                    <div class="brand__btn-inner">
+                                                        <span>256 GB</span>
+                                                    </div>
+                                                </button>
+                                                <button class="btn brand__btn filter__btn-select">
+                                                    <div class="brand__btn-inner">
+                                                        <span>512 GB</span>
+                                                    </div>
+                                                </button>
+                                                <button class="btn brand__btn filter__btn-select">
+                                                    <div class="brand__btn-inner">
+                                                        <span>1 TB</span>
+                                                    </div>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
                                 </div>
 
-                                <div class="filter__form-slider" id="filter__form-slider"
-                                    style="--min-price: 10px; --max-price: 50px">
-                                    <div class="filter__progress" id="filter__progress"></div>
-                                    <input type="range" name="" min="5000000" max="20000000" value="5000000"
-                                        step="1000000" class="filter__input-range filter_range-min"
-                                        id="filter_range-min" data-type-range="range-min">
-                                    <input type="range" name="" min="5000000" max="20000000" value="20000000"
-                                        step="1000000" class="filter__input-range filter_range-max"
-                                        id="filter_range-max" data-type-range="range-max">
-                                </div>
-                            </div>
-                            <div class="filter__separate"></div>
-                            <div class="filter__producer">
-                                <label for="" class="filter__label">Hãng</label>
-                                <div class="filter__form-group">
-                                    <div class="filter__list-btn">
-                                        <button class="btn brand__btn filter__btn-select">
-                                            <div class="brand__btn-inner">
-                                                <span>iPhone</span>
-                                            </div>
-                                        </button>
-                                        <button class="btn brand__btn filter__btn-select">
-                                            <div class="brand__btn-inner">
-                                                <span>OPPO</span>
-                                            </div>
-                                        </button>
-                                        <button class="btn brand__btn filter__btn-select">
-                                            <div class="brand__btn-inner">
-                                                <span>SAMSUNG</span>
-                                            </div>
-                                        </button>
-                                        <button class="btn brand__btn filter__btn-select">
-                                            <div class="brand__btn-inner">
-                                                <span>XIAOMI</span>
-                                            </div>
-                                        </button>
-                                        <button class="btn brand__btn filter__btn-select">
-                                            <div class="brand__btn-inner">
-                                                <span>VIVO</span>
-                                            </div>
-                                        </button>
-                                        <button class="btn brand__btn filter__btn-select">
-                                            <div class="brand__btn-inner">
-                                                <span>REALME</span>
-                                            </div>
-                                        </button>
-                                        <button class="btn brand__btn filter__btn-select">
-                                            <div class="brand__btn-inner">
-                                                <span>NOKIA</span>
-                                            </div>
-                                        </button>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="filter__separate"></div>
-                            <div class="filter__ram">
-                                <label for="" class="filter__label">Ram</label>
-                                <div class="filter__form-group">
-                                    <div class="filter__list-btn">
-                                        <button class="btn brand__btn filter__btn-select">
-                                            <div class="brand__btn-inner">
-                                                <span>3 GB</span>
-                                            </div>
-                                        </button>
-                                        <button class="btn brand__btn filter__btn-select">
-                                            <div class="brand__btn-inner">
-                                                <span>4 GB</span>
-                                            </div>
-                                        </button>
-                                        <button class="btn brand__btn filter__btn-select">
-                                            <div class="brand__btn-inner">
-                                                <span>8 GB</span>
-                                            </div>
-                                        </button>
-                                        <button class="btn brand__btn filter__btn-select">
-                                            <div class="brand__btn-inner">
-                                                <span>12 GB</span>
-                                            </div>
-                                        </button>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="filter__separate"></div>
-                            <div class="filter__rom">
-                                <label for="" class="filter__label">Dung lượng lưu trữ</label>
-                                <div class="filter__form-group">
-                                    <div class="filter__list-btn">
-                                        <button class="btn brand__btn filter__btn-select">
-                                            <div class="brand__btn-inner">
-                                                <span>64 GB</span>
-                                            </div>
-                                        </button>
-                                        <button class="btn brand__btn filter__btn-select">
-                                            <div class="brand__btn-inner">
-                                                <span>128 GB</span>
-                                            </div>
-                                        </button>
-                                        <button class="btn brand__btn filter__btn-select">
-                                            <div class="brand__btn-inner">
-                                                <span>256 GB</span>
-                                            </div>
-                                        </button>
-                                        <button class="btn brand__btn filter__btn-select">
-                                            <div class="brand__btn-inner">
-                                                <span>512 GB</span>
-                                            </div>
-                                        </button>
-                                        <button class="btn brand__btn filter__btn-select">
-                                            <div class="brand__btn-inner">
-                                                <span>1 TB</span>
-                                            </div>
-                                        </button>
-                                    </div>
+                                <div class="filter__action">
+                                    <button class="btn btn--rounded filter__btn-reset">RESET ALL</button>
                                 </div>
                             </div>
                         </div>
+                    </div>
 
-                        <div class="filter__action">
-                            <button class="btn btn--rounded filter__btn-reset">RESET ALL</button>
+                    <div class="col-4 col-xl-4 col-lg-5 col-md-6 col-sm-8">
+                        <div class="filter-wrap">
+                            <button class="form__select-btn js-toggle" target-toggle="form__select" no-scroll="true">
+                                <span class="form__select-text t-h5">Select</span>
+                                <img src="./assets/icons/arrow.svg" alt="" class="form__select-icon">
+                            </button>
+
+                            <ul class="form__select-container hide js-select" id="form__select">
+                                <li class="form__select-item">Select 1</li>
+                                <li class="form__select-item">Select 2</li>
+                                <li class="form__select-item">Select 3</li>
+                                <li class="form__select-item">Select 4</li>
+                            </ul>
                         </div>
                     </div>
                 </div>
-
-                <button class="form__select">
-                    <span class="form__select-text t-h5">Select</span>
-                    <img src="./assets/icons/arrow.svg" alt="" class="form__select-icon">
-                </button>
             </div>
 
             <!-- Product -->

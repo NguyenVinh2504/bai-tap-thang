@@ -7,14 +7,17 @@ function debounce(func, timeout = 300) {
         }, timeout);
     };
 }
+
 function toggle() {
     const widthScreen = window.innerWidth
     const clientWidthDocument = document.body.clientWidth
     const paddingScroll = widthScreen - clientWidthDocument
     const jsToggle = document.querySelectorAll('.js-toggle')
+    const listElTarget = []
     if (!jsToggle) return
     jsToggle.forEach(button => {
         const selectorId = button.getAttribute('target-toggle')
+        listElTarget.push(selectorId)
         const isNoScroll = button.getAttribute('no-scroll')
         const targetEl = document.querySelector(`#${selectorId}`)
         if (!targetEl) return
@@ -27,31 +30,44 @@ function toggle() {
                 if (isNoScroll === 'true') {
                     if (targetEl.classList.contains('hide')) {
                         document.body.style.overflow = ''
-                        // document.body.style.paddingRight = ``
+                        document.body.style.paddingRight = ``
                     } else {
                         document.body.style.overflow = 'hidden'
-                        // document.body.style.paddingRight = `${paddingScroll}px`
+                        document.body.style.paddingRight = `${paddingScroll}px`
                     }
                     window.addEventListener('resize', debounce(() => {
                         if (!(window.innerWidth > 991)) return;
                         targetEl.classList.add("hide");
                         targetEl.classList.remove("show");
                         document.body.style.overflow = ''
-                        // document.body.style.paddingRight = ``
+                        document.body.style.paddingRight = ``
                     }))
                 }
             });
-        };
-
-        document.onclick = function (e) {
-            if (!e.target.closest(`#${selectorId}`)) {
-                const isHidden = targetEl.classList.contains("hide");
-                if (!isHidden) {
-                    button.click();
-                }
-            }
-        };
+        }
     })
+
+    document.onclick = function (e) {
+        // console.log(e.target);
+        const isElTarget = listElTarget.some((elTarget) => e.target.closest(`#${elTarget}`))
+        if (!isElTarget) {
+            const selectorId = listElTarget.find(elTarget => {
+                return document.querySelector(`#${elTarget}`).classList.contains('show')
+            })
+            const targetEl = document.querySelector(`#${selectorId}`)
+            if (targetEl) {
+                // console.log(targetEl.previousElementSibling.click === e.target.click)
+                targetEl.previousElementSibling.click()
+                requestAnimationFrame(() => {
+                    // targetEl.classList.toggle("hide");
+                    // targetEl.classList.toggle("show");
+                    // document.body.style.overflow = ''
+                    // document.body.style.paddingRight = ``
+                });
+            }
+            // const isHidden = targetEl?.classList.contains("hide");
+        };
+    }
 
 }
 
@@ -254,3 +270,27 @@ formSlider.addEventListener('input', function (e) {
         }
     }
 })
+
+
+function select(containerSelect, selectBtn, listItemSelect) {
+    const selectBtnEl = document.querySelector(`.${selectBtn}`)
+    const listContainerSelectEl = document.querySelectorAll(`.${containerSelect}`)
+    const selectActive = `${listItemSelect}--active`
+    const firstItemSelect = document.querySelectorAll(`.${listItemSelect}`)[0]
+    firstItemSelect.classList.add(selectActive)
+    if (selectBtnEl) selectBtnEl.textContent = firstItemSelect.textContent
+
+    listContainerSelectEl.forEach((containerSelectEl) => {
+        const listItemSelectEl = containerSelectEl.querySelectorAll(`.${listItemSelect}`)
+        listItemSelectEl.forEach((itemSelectEl) => {
+            itemSelectEl.addEventListener('click', function (e) {
+                containerSelectEl.querySelector(`.${selectActive}`)?.classList.remove(selectActive)
+                itemSelectEl.classList.add(selectActive)
+                if (selectBtnEl) selectBtnEl.textContent = itemSelectEl.textContent
+            })
+        })
+    })
+    // listItemSelectEl.forEach(itemSelect)
+}
+
+select('js-select', 'form__select-text', 'form__select-item')
