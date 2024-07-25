@@ -9,67 +9,80 @@ function debounce(func, timeout = 300) {
 }
 
 function toggle() {
-    const widthScreen = window.innerWidth
-    const clientWidthDocument = document.body.clientWidth
-    const paddingScroll = widthScreen - clientWidthDocument
-    const jsToggle = document.querySelectorAll('.js-toggle')
-    const listElTarget = []
-    if (!jsToggle) return
-    jsToggle.forEach(button => {
-        const selectorId = button.getAttribute('target-toggle')
-        listElTarget.push(selectorId)
-        const isNoScroll = button.getAttribute('no-scroll')
-        const targetEl = document.querySelector(`#${selectorId}`)
-        if (!targetEl) return
-        button.onclick = (e) => {
+    const widthScreen = window.innerWidth;
+    const clientWidthDocument = document.body.clientWidth;
+    const paddingScroll = widthScreen - clientWidthDocument;
+    const jsToggle = document.querySelectorAll('.js-toggle');
+    const listElTarget = [];
+
+    if (!jsToggle.length) return;
+
+    const handleButtonClick = (button, targetEl, isNoScroll) => {
+        return (e) => {
             e.preventDefault();
             const isHidden = targetEl.classList.contains("hide");
             requestAnimationFrame(() => {
                 targetEl.classList.toggle("hide", !isHidden);
                 targetEl.classList.toggle("show", isHidden);
                 if (isNoScroll === 'true') {
-                    if (targetEl.classList.contains('hide')) {
-                        document.body.style.overflow = ''
-                        document.body.style.paddingRight = ``
+                    if (isHidden) {
+                        document.body.style.overflow = 'hidden';
+                        document.body.style.paddingRight = `${paddingScroll}px`;
                     } else {
-                        document.body.style.overflow = 'hidden'
-                        document.body.style.paddingRight = `${paddingScroll}px`
+                        document.body.style.overflow = '';
+                        document.body.style.paddingRight = '';
                     }
-                    window.addEventListener('resize', debounce(() => {
-                        if (!(window.innerWidth > 991)) return;
-                        targetEl.classList.add("hide");
-                        targetEl.classList.remove("show");
-                        document.body.style.overflow = ''
-                        document.body.style.paddingRight = ``
-                    }))
+                    window.addEventListener('resize', debounce(handleResize(targetEl)));
                 }
             });
         }
-    })
+    };
 
-    document.onclick = function (e) {
-        // console.log(e.target);
-        const isElTarget = listElTarget.some((elTarget) => e.target.closest(`#${elTarget}`))
+    const handleResize = (targetEl) => {
+        return () => {
+            if (window.innerWidth > 991) {
+                targetEl.classList.add("hide");
+                targetEl.classList.remove("show");
+                document.body.style.overflow = '';
+                document.body.style.paddingRight = '';
+            }
+        }
+    };
+
+    const handleDocumentClick = (e) => {
+        const isElTarget = listElTarget.some((elTarget) => e.target.closest(`#${elTarget}`));
         if (!isElTarget) {
             const selectorId = listElTarget.find(elTarget => {
-                return document.querySelector(`#${elTarget}`).classList.contains('show')
-            })
-            const targetEl = document.querySelector(`#${selectorId}`)
+                return document.querySelector(`#${elTarget}`).classList.contains('show');
+            });
+            const targetEl = document.querySelector(`#${selectorId}`);
             if (targetEl) {
-                // console.log(targetEl.previousElementSibling.click === e.target.click)
-                targetEl.previousElementSibling.click()
-                requestAnimationFrame(() => {
-                    // targetEl.classList.toggle("hide");
-                    // targetEl.classList.toggle("show");
-                    // document.body.style.overflow = ''
-                    // document.body.style.paddingRight = ``
-                });
+                targetEl.previousElementSibling.click();
             }
-            // const isHidden = targetEl?.classList.contains("hide");
-        };
-    }
+        }
+    };
 
+    jsToggle.forEach(button => {
+        const selectorId = button.getAttribute('target-toggle');
+        listElTarget.push(selectorId);
+        const isNoScroll = button.getAttribute('no-scroll');
+        const targetEl = document.querySelector(`#${selectorId}`);
+        if (!targetEl) return;
+        button.onclick = handleButtonClick(button, targetEl, isNoScroll);
+    });
+
+    document.onclick = handleDocumentClick;
 }
+
+// Debounce function to limit how often the resize handler is called
+function debounce(func, wait = 100) {
+    let timeout;
+    return function (...args) {
+        clearTimeout(timeout);
+        timeout = setTimeout(() => func.apply(this, args), wait);
+    };
+}
+
 
 toggle()
 const iphoneProductList = [
