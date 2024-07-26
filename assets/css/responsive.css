@@ -17,6 +17,10 @@
     .form__select-item:hover {
         background: transparent;
     }
+
+    .filter__btn-select:hover {
+        background: transparent;
+    }
 }
 
 /* Bé hơn xl là  Lg */
