@@ -308,11 +308,11 @@ function select(containerSelect, selectBtn, listItemSelect) {
 
 select('js-select', 'form__select-text', 'form__select-item')
 
-const filterBtnSelect = document.querySelectorAll('.filter__btn-select')
+const filterBtnSelect = document.querySelectorAll('.filter__btn-select') // as HTMLButtonElement[]
 
 filterBtnSelect.forEach(btnSelect => {
     let isClick = false
-    btnSelect.addEventListener('click', function () {
+    btnSelect.addEventListener('mousedown', function () {
         if (!isClick) {
             isClick = true
             btnSelect.classList.add('active')
