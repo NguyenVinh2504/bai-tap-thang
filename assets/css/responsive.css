@@ -19,7 +19,7 @@
     }
 
     .filter__btn-select:hover {
-        background: transparent;
+        background: var(--color1-2);
     }
 }
 

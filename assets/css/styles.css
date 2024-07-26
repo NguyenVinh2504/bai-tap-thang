@@ -924,7 +924,7 @@ label {
 }
 
 .filter__btn-select.active {
-    background: var(--color1-1);
+    background: var(--color1-1) !important;
 }
 
 .filter__action {
