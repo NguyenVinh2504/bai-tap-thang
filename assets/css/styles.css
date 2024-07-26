@@ -915,6 +915,18 @@ label {
     line-height: normal;
 }
 
+.filter__btn-select .brand__btn-inner::before {
+    background: transparent;
+}
+
+.filter__btn-select .brand__btn-inner:hover {
+    background: hsla(211, 100%, 80%, 0.374);
+}
+
+.filter__btn-select.active .brand__btn-inner {
+    background: var(--color1-1);
+}
+
 .filter__action {
     margin-top: auto;
     display: flex;

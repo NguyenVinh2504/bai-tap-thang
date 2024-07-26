@@ -307,3 +307,28 @@ function select(containerSelect, selectBtn, listItemSelect) {
 }
 
 select('js-select', 'form__select-text', 'form__select-item')
+
+const filterBtnSelect = document.querySelectorAll('.filter__btn-select')
+
+filterBtnSelect.forEach(btnSelect => {
+    let isClick = false
+    btnSelect.addEventListener('click', function () {
+        if (!isClick) {
+            isClick = true
+            btnSelect.classList.add('active')
+        } else {
+            btnSelect.classList.remove('active')
+            isClick = false
+        }
+    })
+})
+
+const btnResetFilter = document.querySelector('.filter__btn-reset')
+btnResetFilter.addEventListener('click', function () {
+    updateRangeUi(rangeMin.min, rangeMax.max)
+    rangeMin.value = rangeMin.min
+    rangeMax.value = rangeMax.max
+    filterBtnSelect.forEach(btnSelect => {
+        btnSelect.classList.remove('active')
+    })
+})
