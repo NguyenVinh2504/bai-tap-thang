@@ -107,6 +107,11 @@ const iphoneProductList = [
         "price": "26.990.000đ"
     },
     {
+        "img": "./assets/img/product/ip15promax.png",
+        "name": "IPhone 15 Pro Max",
+        "price": "29.390.000đ"
+    },
+    {
         "img": "./assets/img/product/ip13.png",
         "name": "IPhone 13",
         "price": "13.890.000đ"
@@ -125,7 +130,22 @@ const iphoneProductList = [
         "img": "./assets/img/product/ip12promax.png",
         "name": "IPhone 12 Pro Max",
         "price": "23.490.000đ"
-    }
+    },
+    {
+        "img": "./assets/img/product/ip15pro.png",
+        "name": "IPhone 15 Pro",
+        "price": "24.990.000đ"
+    },
+    {
+        "img": "./assets/img/product/ip13.png",
+        "name": "IPhone 13",
+        "price": "13.890.000đ"
+    },
+    {
+        "img": "./assets/img/product/ip15plus.png",
+        "name": "IPhone 15 Plus",
+        "price": "22.190.000đ"
+    },
 ]
 
 const samsungListProduct = [

@@ -916,14 +916,14 @@ label {
 }
 
 .filter__btn-select .brand__btn-inner::before {
-    background: transparent;
+    display: none;
 }
 
-.filter__btn-select .brand__btn-inner:hover {
-    background: hsla(211, 100%, 80%, 0.374);
+.filter__btn-select:hover {
+    background: #c6e1ff;
 }
 
-.filter__btn-select.active .brand__btn-inner {
+.filter__btn-select.active {
     background: var(--color1-1);
 }
 
